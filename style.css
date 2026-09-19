@@ -24,6 +24,35 @@ header p {
     font-size: 18px;
 }
 
+/* Specificity Challenge */
+
+/* Element selector */
+h1 {
+    color: white;
+}
+
+/* Class selector */
+.title {
+    color: blue;
+}
+
+/* ID selector */
+#name {
+    color: blue;
+}
+
+/*
+Specificity Challenge:
+The h1, .title, and #name selectors all target the same h1 element.
+
+h1 = 0,0,1
+.title = 0,1,0
+#name = 1,0,0
+
+The #name selector has the highest specificity score (1,0,0),
+so it wins over .title (0,1,0) and h1 (0,0,1). Because of that the name appears blue.
+*/
+
 nav {
     background-color: #111111;
     padding: 20px;
