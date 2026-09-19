@@ -1,0 +1,3 @@
+# HTTP Request Path
+
+When a user enters my GitHub Pages website address, https://saba-20.github.io, into a web browser, the browser sends an HTTP request to GitHub's servers asking for the website. GitHub Pages receives the request and looks for the website's main index.html file in my saba-20.github.io repository. The server sends the HTML file back to the browser. The browser then reads the HTML and sees that it is linked to my external style.css file and the image profile.png stored in the assets folder. The browser sends additional requests for these files, and GitHub Pages returns them. Finally, the browser combines the HTML, CSS, and image and displays my website to the user.
