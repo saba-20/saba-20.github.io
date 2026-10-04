@@ -1,121 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: white;
+  background-color: #0b1f3a;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 40px;
-    text-align: left;
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #06152b;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-header img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-header p {
-    font-size: 18px;
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Specificity Challenge */
-
-/* Element selector */
-h1 {
-    color: white;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s;
 }
 
-/* Class selector */
-.title {
-    color: blue;
+.nav-links a:hover {
+  color: #9ecbff;
+  transform: translateY(3px);
 }
 
-/* ID selector */
-#name {
-    color: blue;
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #12345b;
 }
 
-/*
-Specificity Challenge:
-The h1, .title, and #name selectors all target the same h1 element.
-
-h1 = 0,0,1
-.title = 0,1,0
-#name = 1,0,0
-
-The #name selector has the highest specificity score (1,0,0),
-so it wins over .title (0,1,0) and h1 (0,0,1). Because of that the name appears blue.
-*/
-
-nav {
-    background-color: #111111;
-    padding: 20px;
-    text-align: center;
+.hero h1 {
+  margin: 0;
+  font-size: 40px;
 }
 
-nav a {
-    color: blue;
-    text-decoration: none;
-    margin: 0 15px;
+.subtitle {
+  font-size: 22px;
+  margin: 10px 0;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-
-
-main {
-    width: 80%;
-    max-width: 1000px;
-    margin: auto;
-}
-
+/* Sections */
 section {
-    padding: 30px 0;
-    border-bottom: 1px solid #333333;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 25px;
 }
 
 h2 {
-    color: blue;
-    font-size: 28px;
+  margin-bottom: 20px;
+  color: white;
 }
 
-h3 {
-    color: white;
+/* Links */
+a {
+  color: #9ecbff;
 }
 
-
-li {
-    margin: 10px 0;
+a:hover {
+  color: white;
 }
 
+/* Skills */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.tags li {
+  background-color: #1d4775;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* Highlights and Research */
+.highlights {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.highlights li {
+  margin-bottom: 10px;
+}
+
+/* Career Interests Gallery */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background-color: white;
+  color: #222;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  color: #0b1f3a;
+}
+
+.card p {
+  color: #333;
+}
+
+/* Coursework */
+.table-wrap {
+  overflow-x: auto;
+}
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  color: #222;
 }
 
 th,
 td {
-    border: 1px solid #444444;
-    padding: 12px;
-    text-align: left;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
 }
 
 th {
-    color: blue;
+  background-color: #06152b;
+  color: white;
 }
 
+/* Contact */
+#contact {
+  padding-bottom: 60px;
+}
 
+#contact p {
+  margin: 10px 0;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    padding: 25px;
-    color: #aaaaaa;
+  text-align: center;
+  background-color: #06152b;
+  color: white;
+  padding: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 35px 20px;
+  }
 }

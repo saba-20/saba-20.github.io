@@ -1,3 +1,9 @@
-# HTTP Request Path
+# Reflection
 
-When a user enters my GitHub Pages website address, https://saba-20.github.io, into a web browser, the browser sends an HTTP request to GitHub's servers asking for the website. GitHub Pages receives the request and looks for the website's main index.html file in my saba-20.github.io repository. The server sends the HTML file back to the browser. The browser then reads the HTML and sees that it is linked to my external style.css file and the image profile.png stored in the assets folder. The browser sends additional requests for these files, and GitHub Pages returns them. Finally, the browser combines the HTML, CSS, and image and displays my website to the user.
+## 1. Explain the difference between flex-direction: row and flex-direction: column.
+
+flex-direction: row places the items next to each other horizontally. flex-direction: column places the items on top of each other vertically. In my website, I use row for the navigation on larger screens and column on mobile so the navigation links stack vertically.
+
+## 2. Why is it important to use relative units (like %, vh, or rem) instead of fixed pixels (px) for responsive design?
+
+Relative units such as %, vh, and rem are useful for responsive design because they adjust based on the screen size or the user's settings. This helps the website work better on different devices instead of having everything stay at a fixed size. Fixed pixels (px) can make content too large or too small on different screen sizes.
